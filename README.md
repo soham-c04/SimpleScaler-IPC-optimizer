@@ -33,7 +33,7 @@ Shows the comparison between the IPC produced when default.cfg is used, the best
 ## How to Run
 - Make sure Environment for SimpleScalar cross-compiler is properly setup. ([How to do?](https://github.com/soham-c04/SimpleScaler-IPC-optimizer?tab=readme-ov-file#cross-compiler-setup))
 - The parent of [optimizer.cpp](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/optimizer.cpp) and **installn_files** should be the same. Otherwise, replace `../installn_files` in [optimizer.cpp](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/optimizer.cpp) by path to that folder.
-- Run the command `./run.sh` (Use `chmod +x run.sh` first is it shows Permission denied).
+- Run the command `./run.sh` (Use `chmod +x run.sh` first if it shows Permission denied).
 - Enter relative path to the C code to be optimized.
 - Enter relative path to parameters file.
 <br> <br>
