@@ -18,7 +18,7 @@ Shows the comparison between the IPC produced when default.cfg is used, the best
 | Program | Default IPC | Best IPC | Worst IPC |
 |:----------:|:----------:|:----------:|:----------:|
 | [Matrix Multiplication](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/benchmarks/matmul.c) | 2.0848 | 2.1711 | 0.9015 | 
-| [Testcase](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/benchmarks/testcase.c) | 1.7804 | 3.0522 | 0.4153 | 
+| [Testcase](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/benchmarks/testcase.c) | 0.9078 | 2.8522 | 0.5558 | 
 | [FFT](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/benchmarks/fft.c) | 1.3793 | 1.6319 | 0.9668 |
 
 <br>
