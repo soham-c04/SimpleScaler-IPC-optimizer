@@ -13,7 +13,7 @@ Our goal is to produce the optimal IPC for a given C code by changing the defaul
 <br>
 
 ## Benchmarks
-Shows the comparison between the IPC produced when default.cfg is used, the best possible IPC, and the worst possible IPC(to show the worst case scenario if parameters in config.cfg had been chosen incorrectly) from the set of input parameters
+Shows the comparison between the IPC produced when default.cfg is used, the best possible IPC, and the worst possible IPC (to show the worst case scenario if parameters in config.cfg had been chosen incorrectly) from the set of input parameters.
 
 | Program | Default IPC | Best IPC | Worst IPC |
 |:----------:|:----------:|:----------:|:----------:|
@@ -27,7 +27,7 @@ Shows the comparison between the IPC produced when default.cfg is used, the best
 - To change size of cache change values in default.cfg.
 - Block sizes greater than 64 might not be supported in this version of SimpleScalar.
 - The total simulation/computation time is = $\text{code running time} \times \text{(product of no. of values each parameter can take)}$.
-- Hence, with each increase in additional parameter value, the search space and time requried for search blows up exponentially.
+- Hence, with each increase in additional parameter value, the search space and time required for search goes up exponentially.
 <br> <br>
 
 ## How to Run
@@ -40,7 +40,7 @@ Shows the comparison between the IPC produced when default.cfg is used, the best
 
 ## Parameter Input
 - Create a file with read access (can be .txt file).
-- Enter parameters non-cache/non-TLB parameters in the following format:
+- Enter non-cache/non-TLB parameters in the following format:
   - Enter the keyword to parameter as present in default.cfg file. E.g:-
     - `-bpred`: Branch Predictor
     - `-decode:width`: Instruction decode B/W (insts/cycle)
@@ -49,7 +49,7 @@ Shows the comparison between the IPC produced when default.cfg is used, the best
   - Go to a new-line and then repeat until required non-cache/non-TLB parameters are given.
 - Enter a newline (press Enter).
 - Enter cache/TLB paramters in following format:
-  - Enter inputs to (atmost) 5 rows in order for: dl1-cache, il1-cache, dl2-cache, d-tlb, i-tlb
+  - Enter inputs to (atmost) 5 rows in order for: dl1-cache, il1-cache, dl2-cache, d-tlb, i-tlb.
   - In each row enter
     - list of single-space-separated associativity values (Use 0 for default value)
     - 2 spaces
@@ -65,10 +65,10 @@ Shows the comparison between the IPC produced when default.cfg is used, the best
 ## Error Codes
 If the code returns with an exit code of 0, this implies that the simulation ran perfectly. Otherwise, following are the reasons and possible fix for each exit code:
 - **1**
-  - Reason: void.c unable to run with config.cfg file 
+  - Reason: void.c unable to run with config.cfg file.
   - Fix: Check if all parameters in config.cfg file are having values within correct bounds (e.g. cache parameters). Check out.txt file and look for hints to errors in there.
 - **2** and **4**
-  - Reason: Rewriting of instruction count and cycle count into out.txt failed
+  - Reason: Rewriting of instruction count and cycle count into out.txt failed.
   - Fix:    Check if out.txt was correctly generated/overwritten after previous command.
 - **3**
   - Reason: Unable to run Given C code with sim-outorder and config.cfg.
@@ -115,8 +115,8 @@ Here `~` expands to `/home/<user>` in my case
 | 23 | ~/installn_files/simplesim-3.0 | cd $IDIR/gcc-2.7.2.3 |
 | 24 | ~/installn_files/gcc-2.7.2.3 | ./configure --host=$HOST --target=$TARGET --with-gnu-as --with-gnu-ld --prefix=$IDIR |
 | 25 | ~/installn_files/gcc-2.7.2.3 | chmod -R +w . |
-| 26 | ~/installn_files/gcc-2.7.2.3 | nano protoize.c → change #include <varargs.h> → #include <stdarg.h> |
-| 27 | ~/installn_files/gcc-2.7.2.3 | nano obstack.h → change )++ → ++) |
+| 26 | ~/installn_files/gcc-2.7.2.3 | nano protoize.c [ Go to line 60 and change `#include <varargs.h>` to `#include<stdarg.h>` ] |
+| 27 | ~/installn_files/gcc-2.7.2.3 | nano obstack.h [ Go to line 341 and change `)++` to `++)` ] |
 | 28 | ~/installn_files/gcc-2.7.2.3 | cp ./patched/sys/cdefs.h ../sslittle-na-sstrix/include/sys/cdefs.h |
 | 29 | ~/installn_files/gcc-2.7.2.3 | cp ../sslittle-na-sstrix/lib/libc.a ../lib/ |
 | 30 | ~/installn_files/gcc-2.7.2.3 | cp ../sslittle-na-sstrix/lib/crt0.o ../lib/ |
@@ -125,8 +125,8 @@ Here `~` expands to `/home/<user>` in my case
 | 33 | ~/installn_files/gcc-2.7.2.3 | sudo apt-get update |
 | 34 | ~/installn_files/gcc-2.7.2.3 | sudo apt-get install libc6-dev-i386 gcc-multilib g++-multilib |
 | 35 | ~/installn_files/gcc-2.7.2.3 | make LANGUAGES=c CFLAGS=-O CC="gcc -m32" |
-| 36 | ~/installn_files/gcc-2.7.2.3 | nano insn-output.c → add \ at ends of lines 675, 750, 823 |
-| 37 | ~/installn_files/gcc-2.7.2.3 | nano gcc.c → add int sys_nerr = 0; below extern int sys_nerr; |
+| 36 | ~/installn_files/gcc-2.7.2.3 | nano insn-output.c [ Add \ in the end of lines 675, 750 and 823 ] |
+| 37 | ~/installn_files/gcc-2.7.2.3 | nano gcc.c [ Add `int sys_nerr = 0;` below `extern int sys_nerr;` ] |
 | 38 | ~/installn_files/gcc-2.7.2.3 | make LANGUAGES=c CFLAGS=-O CC="gcc -m32" |
 | 39 | ~/installn_files/gcc-2.7.2.3 | make enquire |
 | 40 | ~/installn_files/gcc-2.7.2.3 | $IDIR/simplesim-3.0/sim-safe ./enquire -f > float.h-cross |
