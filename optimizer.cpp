@@ -124,8 +124,8 @@ void Parameters(string &params){
     fin.close();
 }
 
-vector<string> current_state, optimal_state;
-float best_IPC = 0;
+vector<string> current_state, optimal_state, worst_state;
+float best_IPC = 0, worst_IPC = 2e9;
 
 float optimal_cache(int i){
     if(i==5){
@@ -133,6 +133,10 @@ float optimal_cache(int i){
         if(ipc > best_IPC){
             best_IPC = ipc;
             optimal_state = current_state;
+        }
+        if(ipc < worst_IPC){
+            worst_IPC = ipc;
+            worst_state = current_state;
         }
         return ipc;
     }
@@ -232,6 +236,8 @@ int main(){
     for(;i<variables.size();i++) if(variables[i].second.size()>1) cout<<variables[i].first<<" =   "<<optimal_state[i]<<endl;
     for(;i<optimal_state.size();i++) cout<<optimal_state[i]<<endl;
 
+    cout<<"\nWorst IPC: "<<worst_IPC<<endl;
+    
     cout<<"\nSimulation Time (s): "<<chrono::duration_cast<chrono::seconds>(end - start).count()<<endl<<endl;
     return 0;
 }
