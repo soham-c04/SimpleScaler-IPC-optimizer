@@ -59,7 +59,7 @@ Shows the comparison between the IPC produced when default.cfg is used, the best
   - Not all rows need to be entered. Say, if only values in first 3-rows are given, then dl1, il1 and dl2 will respectively iterate over those values and remaining d-tlb and i-tlb will take default values from default.cfg.
   - For a given row all 3 columns need to be entered even if by 0 (default value).
 - Adding extra/unnecessary spaces, tabs or newlines other than the ones mentioned above will result in error in reading from file.
-- Example files - [parameters.txt](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/parameters.txt), [parameters1.txt](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/benchmarks/parameters1.txt), [parameters2.txt](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/benchmarks/parameters2.txt)
+- Example files - [parameters.txt](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/parameters.txt), [parameters1.txt](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/parameter_inputs/parameters1.txt), [parameters2.txt](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/parameter_inputs/parameters2.txt)
 <br> <br>
 
 ## Error Codes
