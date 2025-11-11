@@ -13,12 +13,12 @@ Our goal is to produce the optimal IPC for a given C code by changing the defaul
 <br>
 
 ## Benchmarks
-Shows the comparison between the IPC produced when default.cfg is used, the best possible IPC, and the worst possible IPC (t) from the set of input parameters
+Shows the comparison between the IPC produced when default.cfg is used, the best possible IPC, and the worst possible IPC(to show the worst case scenario if parameters in config.cfg had been chosen incorrectly) from the set of input parameters
 
 | Program | Default IPC | Best IPC | Worst IPC |
 |:----------:|:----------:|:----------:|:----------:|
-| Matrix Multiplication | 2.0848 | 2.1711 | 0.9015 | 
-| Testcase | 1.7804 | 3.0522 | 0.4153 | 
+| [Matrix Multiplication](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/benchmarks/matmul.c) | 2.0848 | 2.1711 | 0.9015 | 
+| [Testcase](https://github.com/soham-c04/SimpleScaler-IPC-optimizer/blob/main/benchmarks/testcase.c) | 1.7804 | 3.0522 | 0.4153 | 
 
 <br>
 
