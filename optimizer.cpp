@@ -152,6 +152,7 @@ float optimal_cache(int i){
                 if(state) current_state.push_back(mp[i]+":Associativity   =   " + to_string(associativity));
                 for(int &block_size:cache[i][1]){
                     int nsets = product[i]/(associativity*block_size);
+                    if(nsets==0) continue;
                     if(state){
                         current_state.push_back(mp[i]+":Block_size   =   " + to_string(block_size));
                         current_state.push_back(mp[i]+":nsets   =   " + to_string(nsets));
