@@ -15,14 +15,14 @@ Our goal is to produce the optimal IPC for a given C code by changing the defaul
 
 ## Practical Uses
 - Improvement in IPC results in decrease in no. of Clock cycles required for a fixed number of instructions or in other words, the time required to run a code in reduced without doing any changes in the code, by just changing the configuration on which the code is run.
-- **Neural Networkss:**
+- **Neural Networks:**
   - Most of the computation time spent in Neural Networks is spent on Matrix Multiplication.
   - In neural network we know beforehand the dimensions of Matrix Multiplication.
   - So, we can create a C code for matrix multiplication with the required dimenions and find the optimal configuration which minimizes the time for multiplication and then use it ot run the actual Neural Network code.
 - **Branch Predictor evaluation:**
   - We can test the performance of a newly developed branch predictor with respect to already existing ones.
   - All possible combination of the new predictor can be tested and we can find the optimal set of configuration which best correlates to the predictor to improve IPC.
-- **Cache Replacement Policy:** Same as Branch Predictor evaluation.
+- **Cache Replacement Policy:**     Same concept as Branch Predictor evaluation.
 <br>
 
 ## Benchmarks
